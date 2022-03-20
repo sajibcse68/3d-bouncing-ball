@@ -22,10 +22,19 @@ body {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: lightblue;
+  background: lightblue;
   position: absolute;
-  right: -0.5em;
+  left: -0.5em;
   bottom: 1em;
+  right: -0.5em;
+  background-image: radial-gradient(circle at top, lightblue, #000);
+}
+
+.ballShadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#0007, #0000 50%);
 }
 
 .cube {
@@ -70,15 +79,15 @@ body {
   transform: translateY(-50%) rotateX(90deg);
 }
 
-/* .bottom {
-    position: absolute;
-    width: 2em;
-    height: 2em;
-    background: var(--boxColor);
-    box-shadow: 0 0 0.5em #000;
-    bottom: 0;
-    transform: translateY(50%) rotateX(90deg);
-  } */
+.bottom {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: #0007;
+  bottom: 0;
+  transform: translateY(50%) rotateX(90deg);
+  box-shadow: 0 0 0.5em #000;
+}
 
 .floor {
   position: absolute;
@@ -86,7 +95,7 @@ body {
   height: 15em;
   top: 1em;
   background-image: redial-gradient(#0000, #000 75%),
-  repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+    repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
   transform: translate(-50%, -50%) rotateX(90deg);
   background-size: 100%, 1em 1em;
 }
