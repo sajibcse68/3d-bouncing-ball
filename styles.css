@@ -13,7 +13,7 @@
 @keyframes ballBounce {
   0%,
   100% {
-    bottom: 1em;
+    bottom: 0.5em;
   }
   50% {
     bottom: 3em;
@@ -22,6 +22,8 @@
 }
 @keyframes ballShadow {
   0%,
+  8%,
+  93.5%,
   100% {
     transform: scale(1);
     opacity: 1;
@@ -30,6 +32,17 @@
     transform: scale(2);
     opacity: 0.5;
     animation-timing-function: ease-in;
+  }
+}
+
+@keyframes cubeHeight {
+  0%,
+  100% {
+    height: 1.5em;
+  }
+  6.5%,
+  93.5% {
+    height: 2em;
   }
 }
 
@@ -79,6 +92,7 @@ body {
   bottom: -1em;
   left: -1em;
   transform-style: preserve-3d;
+  animation: cubeHeight var(--bounceSpeed) infinite linear;
 }
 
 .left,
